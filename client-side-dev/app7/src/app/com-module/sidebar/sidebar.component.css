@@ -1,0 +1,43 @@
+.sidebar{
+    
+    width: fit-content;
+    min-height: 80vh;
+    translate: 0;
+    transition: all 0.75s ease;
+    /* display: none; */
+}
+
+.hide{
+    translate: -100% ;
+}
+:host {
+    &.sidebar-display{
+        display: none;
+    }
+}
+
+.sidebar-display{
+    width: 150px;
+    height: 80vh;
+    background-color: antiquewhite;
+}
+ul{
+    list-style: none;
+    
+}
+
+details summary {
+    transition: all 0.5s ease-in;
+}
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }  
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
+
+nav a{
+    text-decoration: none;
+}
+

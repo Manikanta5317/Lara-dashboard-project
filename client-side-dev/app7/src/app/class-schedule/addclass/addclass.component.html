@@ -1,0 +1,36 @@
+<div class="container" style="width: 400px; padding-top: 50px; margin-right: 150px;" >
+    <div *ngIf="msgOk" class="view" style="color:red">{{content}}</div>
+    <div *ngIf="msgDanger"><span class="view" style="color: red;">{{content}}</span></div> 
+    <div><h2>Class Schedule</h2></div>
+    <form  [formGroup]="addForm"  (ngSubmit)="add()">
+     <label for="time">Class Time</label><br>
+     <input type="text" id="time" name="form-control" formControlName="time" placeholder="Class Time"><br>
+     <span *ngIf="time?.touched && time?.invalid" style="color: red;">please enter time</span><br>
+
+     <label for="batchName">Batch Name</label><br>
+     <input type="text" id="batchName" name="form-control" formControlName="batchName" placeholder="Batch Name"><br>
+     <span *ngIf="batchName?.touched && batchName?.invalid" style="color: red;">please enter batchName</span><br>
+
+     <label for="instructor">Instructor</label><br>
+     <input type="text" id="instructor" name="form-control" formControlName="instructor" placeholder="Instructor"><br>
+     <span *ngIf="instructor?.touched && instructor?.invalid" style="color: red;">please enter instructor</span><br>
+
+     <label for="classType">Class Type</label>&nbsp;&nbsp;
+     <select name="classType" id="classType" formControlName="classType" value="Class Type">
+        select
+        <option value="aptitude" >Aptitude</option>
+        <option value="technical">Technical</option>
+        <option value="softSkill">SoftSkill</option>
+      </select><br><br>
+      <span *ngIf="classType?.touched && classType?.invalid" style="color: red;">please select about option</span><br>
+
+     <label for="topic">Topic</label><br>
+     <input type="text" id="topic" name="form-control" formControlName="topic" placeholder="Topic"><br>
+     <span *ngIf="topic?.touched && topic?.invalid" style="color: red;">please enter topic</span><br>
+
+     <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="submit" value="submit" [disabled]="!addForm.valid">Submit</button>
+    </div>
+    
+    </form>
+</div>

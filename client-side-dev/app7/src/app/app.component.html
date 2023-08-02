@@ -1,0 +1,9 @@
+
+<div><app-header (showDashboard)="showDashboardEvent($event)"></app-header></div>
+<div class="d-flex main">
+    <app-sidebar [notShowDashboard]="showDashboardParent" class="sidebar" ></app-sidebar>
+    <section style="width: 100%;">
+        <router-outlet></router-outlet></section>
+</div>
+<div><app-footer></app-footer></div>
+

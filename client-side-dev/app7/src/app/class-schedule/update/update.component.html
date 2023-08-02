@@ -1,0 +1,79 @@
+
+<div class="container">
+  <div class="data-list-container">
+    <div>
+      <h3>Date : {{ classScheduleRecords[0]?.date }}</h3>
+    </div>
+    <h2>Class Schedule Data List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Time</th>
+          <th>Batch Name</th>
+          <th>Instructor</th>
+          <th>Class Type</th>
+          <th>Topic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of classScheduleRecords; let i = index">
+          <td>{{ data.id }}</td>
+          <td>{{ data.time }}</td>
+          <td>{{ data.batchName }}</td>
+          <td>{{ data.instructor }}</td>
+          <td>{{ data.classType }}</td>
+          <td>{{ data.topic }}</td>
+          <td><button class="btn btn-dark" (click)="updateEntry(i)" id="update">Update</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="content-container">
+  <!-- <div *ngIf="msgOk" class="view" style="color: green">{{content}}</div>
+  <div *ngIf="msgDanger"><span class="view" style="color: red;">{{content}}</span></div> -->
+
+  
+  <form  [formGroup]="updateForm"  (ngSubmit)="update()">
+    <h2>Update</h2>
+    <label for="id">Id</label><br>
+   <input type="text" id="id" name="form-control" formControlName="id" placeholder="S.No"><br>
+   <span *ngIf="id?.touched && id?.invalid" style="color: red;">please enter id</span><br>
+
+   <label for="time">Class Time</label><br>
+   <input type="text" id="time" name="form-control" formControlName="time" placeholder="Class Time"><br>
+   <span *ngIf="time?.touched && time?.invalid" style="color: red;">please enter time</span><br>
+
+   <label for="batchName">Batch Name</label><br>
+   <input type="text" id="batchName" name="form-control" formControlName="batchName" placeholder="Batch Name"><br>
+   <span *ngIf="batchName?.touched && batchName?.invalid" style="color: red;">please enter batchName</span><br>
+
+   <label for="instructor">Instructor</label><br>
+   <input type="text" id="instructor" name="form-control" formControlName="instructor" placeholder="Instructor"><br>
+   <span *ngIf="instructor?.touched && instructor?.invalid" style="color: red;">please enter instructor</span><br>
+
+   <label for="classType">Class Type</label>&nbsp;&nbsp;&nbsp;
+   <select name="classType" id="classType" formControlName="classType" value="Class Type">
+      select
+      <option value="aptitude" >Aptitude</option>
+      <option value="technical">Technical</option>
+      <option value="softSkill">SoftSkill</option>
+    </select>
+    <br>
+   <span *ngIf="classType?.touched && classType?.invalid" style="color: red;">please the about options</span><br>
+
+   <label for="topic">Topic</label><br>
+   <input type="text" id="topic" name="form-control" formControlName="topic" placeholder="Topic"><br>
+   <span *ngIf="topic?.touched && topic?.invalid" style="color: red;">please enter topic</span><br>
+   <button  class="d-grid gap-2 col-6 mx-auto" class="btn btn-primary" type="submit" value="submit" [disabled]="!updateForm.valid" >Submit</button>
+   
+    <div *ngIf="msgOk" class="view" style="color: green">{{content}}</div>
+  <div *ngIf="msgDanger"><span class="view" style="color: red;">{{content}}</span></div>
+  </form>
+</div>
+
+
+    

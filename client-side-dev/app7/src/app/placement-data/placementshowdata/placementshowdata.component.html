@@ -1,0 +1,28 @@
+
+<div class="container" style="display: flex; justify-content: center; align-items: center;">
+    <div class="data-list-container">
+        <h2>Placement Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Entry</th>
+                    <th>Date</th>
+                    <th>Company Name</th>
+                    <th>Students Attended</th>
+                    <th>Students Placed</th>
+                    <th>Salary Package(LPA)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of placementdata; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ data.date }}</td>
+                    <td>{{ data.companyName }}</td>
+                    <td>{{ data.studentAttended }}</td>
+                    <td>{{ data.studentPlaced }}</td>
+                    <td>{{data.salaryPackage}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 

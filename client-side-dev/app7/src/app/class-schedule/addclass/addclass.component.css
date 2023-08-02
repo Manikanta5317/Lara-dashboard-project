@@ -1,0 +1,21 @@
+input{
+    width: 75%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background-color:blue;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  
+    /* Add the following styles */
+    margin-top: 20px;
+    align-items: center;
+  }

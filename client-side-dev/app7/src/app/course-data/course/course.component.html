@@ -1,0 +1,61 @@
+<div class="container" style="display: flex;">
+    <!-- Placement Data List on the left -->
+    <div class="data-list-container">
+      <h2>Courser Data List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Entry</th>
+            <th>Course Name</th>
+            <th>Course Start Date</th>
+            <th>Course Hours</th>
+            <th>Demo Start Date</th>
+            <th>Demo End Date</th>
+            <th>Scholarship Test Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of coursedata; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ data.courseName }}</td>
+            <td>{{ data.startDate }}</td>
+            <td>{{ data.hours }}</td>
+            <td>{{data.demoStartDate}}</td>
+            <td>{{data.demoEndDate}}</td>
+            <td>{{data.scholarshipDate}}</td>
+            <td><button (click)="updateEntry(i)" id="update">Update</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+<div style="margin: right 0; margin-top: 0">
+    <h2>Course Data Form</h2>
+    <form class="bg-light py-3" [formGroup]="courseForm" (ngSubmit)="save(courseForm)">
+      <label for="courseName">Course Name:</label><br>
+      <input type="text" id="courseName" formControlName="courseName" required><br><br>
+  
+      <label for="courseStartDate">Course Starting Date:</label><br>
+      <input type="date" id="courseStartDate" formControlName="startDate" required><br><br>
+  
+      <label for="demoStartDate">Demo Starting Date:</label><br>
+      <input type="date" formControlName="demoStartDate" id="demoStartDate" required><br><br>
+  
+      <label for="demoEndDate">Demo Ending Date:</label><br>
+      <input type="date" id="demoEndDate" formControlName="demoEndDate" required><br><br>
+
+      <label for="courseHours">Course Hours:</label><br>
+      <input type="number"  id="hours" formControlName="hours" required><br><br>
+
+      <label for="scholarshipDate">scholarship Test Date:</label><br>
+      <input type="date"  id="scholarshipDate" formControlName="scholarshipDate" required><br><br>
+  
+      {{ saveMessage }} {{updateMessage}}
+      <br>
+      <button [hidden]="hiddens" type="submit" class="btn btn-primary">Submit</button>
+      <br><br>
+      <button [hidden]="hiddenu" style="margin-top: -67px;" type="button" class="btn btn-primary overlap-button" (click)="changes()">Update</button>
+  
+    </form>
+  </div>

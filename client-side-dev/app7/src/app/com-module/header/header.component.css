@@ -1,0 +1,17 @@
+#header{
+    min-height: 10vh;
+    
+    transition: all 0.5s ease;
+}
+#header:hover{
+    box-shadow: 1px 1px 5px rgb(22, 1, 1,0.5);
+}
+
+.custom-brand{
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.custom-brand:hover{
+    font-weight: 600;
+}

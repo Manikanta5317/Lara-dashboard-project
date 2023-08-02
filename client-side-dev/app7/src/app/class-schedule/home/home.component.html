@@ -1,0 +1,30 @@
+
+
+<div class="container" style="display: flex; width: 800px;">
+
+    <div class="data-list-container">
+        <div><h3>Date :{{fetchList[0]?.date}}</h3></div>
+      <h2>Class Schedule Data List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Time</th>
+            <th>Batch Name</th>
+            <th>Instructor</th>
+            <th>Class Type</th>
+            <th>Topic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of fetchList; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ data.time }}</td>
+            <td>{{ data.batchName }}</td>
+            <td>{{ data.instructor }}</td>
+            <td>{{ data.classType }}</td>
+            <td>{{ data.topic }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

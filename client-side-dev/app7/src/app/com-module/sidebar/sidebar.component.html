@@ -1,0 +1,49 @@
+<div class="sidebar hide"  [ngClass]="{'hide': notShowDashboard}">
+    <div  [ngStyle]="{'display' : sidebarDisplay}" >
+        <nav class="sidebar-display">
+            <ul class="m-0 p-2 ">
+                
+                <li>
+                    <details>
+                        <summary class="mb-2"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ">ClassSchedule</a></summary>
+                        <ul>
+                            <li>
+                                <p><a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" routerLink="addclass">Add Class</a></p>
+                            </li>
+                            <li>
+                                <p><a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" routerLink="update">Update Class</a></p>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary class="mb-2"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ">PlacementData</a></summary>
+                        <ul>
+                            <li>
+                                <p><a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" routerLink="placementdata">Manage Placement Data</a></p>
+                            </li>
+                            <li>
+                                <p><a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" routerLink="placementshow">Show Placement Data</a></p>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary class="mb-2"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ">BatchData</a></summary>
+                        <ul>
+                            <li>
+                                <p><a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" routerLink="course">Manage Batch Data</a></p>
+                            </li>
+                            <li>
+                                <p><a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" routerLink="placementshow">Show Batch Data</a></p>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+               
+            </ul>
+        </nav>
+    </div>
+</div>

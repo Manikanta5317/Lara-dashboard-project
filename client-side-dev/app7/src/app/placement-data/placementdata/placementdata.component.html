@@ -1,0 +1,63 @@
+
+
+<div class="container" style="display: flex;">
+    <!-- Placement Data List on the left -->
+    <div class="data-list-container">
+      <h2>Placement Data List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Entry</th>
+            <th>Date</th>
+            <th>Company Name</th>
+            <th>Students Attended</th>
+            <th>Students Placed</th>
+            <th>Salary Package(LPA)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of placementdata; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ data.date }}</td>
+            <td>{{ data.companyName }}</td>
+            <td>{{ data.studentAttended }}</td>
+            <td>{{ data.studentPlaced }}</td>
+            <td>{{data.salaryPackage}}</td>
+            <td><button (click)="updateEntry(i)" id="update">Update</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  
+
+  <!-- Placement Data Form on the right -->
+<div style="margin: right 0; margin-top: 0">
+  <h2>Placement Data Form</h2>
+  <form class="bg-light py-3" [formGroup]="placementForm" (ngSubmit)="save(placementForm)">
+    <label for="companyName">Company Name:</label><br>
+    <input type="text" id="companyName" formControlName="companyName" required><br><br>
+
+    <label for="studentAttended">No. of Students Attended:</label><br>
+    <input type="number" id="studentAttended" formControlName="studentAttended" required><br><br>
+
+    <label for="studentPlaced">No. of Students Placed:</label><br>
+    <input type="number" id="studentPlaced" formControlName="studentPlaced" required><br><br>
+
+    <label for="salaryPackage">Salary Package(LPA):</label><br>
+    <input type="number" formControlName="salaryPackage" id="salaryPackage" required><br><br>
+
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" formControlName="date" required><br><br>
+
+    {{ saveMessage }} {{updateMessage}}
+    <br>
+    <button [hidden]="hiddens" type="submit" class="btn btn-primary">Submit</button>
+    <br><br>
+    <button [hidden]="hiddenu" style="margin-top: -67px;" type="button" class="btn btn-primary overlap-button" (click)="changes()">Update</button>
+
+  </form>
+</div>
+
+  

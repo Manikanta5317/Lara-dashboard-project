@@ -1,0 +1,12 @@
+section{
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar{
+    z-index: 5;
+}
+.main{
+    background-color:azure;
+} 

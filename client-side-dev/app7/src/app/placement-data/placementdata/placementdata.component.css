@@ -1,0 +1,118 @@
+input
+{
+    border : 1px solid black;
+    border-radius: 6px;
+    width: 250px;
+}
+
+/* Add this to your component's CSS file (e.g., placementdata-list.component.css) */
+
+  
+  .entry-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Add this to your component's CSS file (e.g., placementdata-list.component.css) */
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  #update {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #update:hover {
+    background-color: #45a049;
+  }
+
+  /* Adjust container styles for form and data list */
+.container {
+    display: flex;
+    justify-content: space-between; /* Add space between the two containers */
+    margin-top: 70px;
+  }
+  
+  /* Form container on the right */
+  .form-container {
+    width: 320px;
+    padding: 8px; /* Add padding to create space around the form */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .data-list-container {
+    width: fit-content;
+  }
+  
+  .bg-light {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-primary {
+    margin-top: 10px;
+  }
+
+  /* Adjust container styles for form and data list */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Reduce the top-side space between the header and the form */
+  }
+  
+  /* Form container on the right */
+  .form-container {
+    width: 320px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Data list container on the left */
+  .data-list-container {
+    width: fit-content;
+  }
+  
+  /* Style the form */
+  .bg-light {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+
+
+  
+  
+  
+  
+  
